@@ -40,4 +40,23 @@
     </context>
   </template>
   <template name="elvfilterform" value="&lt;div class=&quot;the-filter-form&quot;&gt;&#10;    &lt;el-form :inline=&quot;true&quot; :model=&quot;filterForm&quot; ref=&quot;filterForm&quot;&gt;&#10;        &lt;el-form-item label=&quot;管理员帐号&quot; prop=&quot;username&quot;&gt;&#10;            &lt;el-input v-model=&quot;filterForm.username&quot;&gt;&lt;/el-input&gt;&#10;        &lt;/el-form-item&gt;&#10;&#10;        &lt;el-form-item label=&quot;真实姓名&quot; prop=&quot;realname&quot;&gt;&#10;            &lt;el-input v-model=&quot;filterForm.realname&quot;&gt;&lt;/el-input&gt;&#10;        &lt;/el-form-item&gt;&#10;&#10;        &lt;el-form-item label=&quot;昵称&quot; prop=&quot;nickname&quot;&gt;&#10;            &lt;el-input v-model=&quot;filterForm.nickname&quot;&gt;&lt;/el-input&gt;&#10;        &lt;/el-form-item&gt;&#10;&#10;        &lt;el-form-item&gt;&#10;            &lt;el-button type=&quot;primary&quot; @click=&quot;onFilterSubmit&quot;&#10;                &gt;检索&lt;/el-button&#10;            &gt;&#10;        &lt;/el-form-item&gt;&#10;&#10;        &lt;el-form-item&gt;&#10;            &lt;el-button @click=&quot;onFilterReset&quot;&gt;重置&lt;/el-button&gt;&#10;        &lt;/el-form-item&gt;&#10;    &lt;/el-form&gt;&#10;&lt;/div&gt;" description="列表页检索过滤表单" toReformat="true" toShortenFQNames="true" />
+  <template name="elvform" value="&lt;el-form ref=&quot;postForm&quot; :model=&quot;postForm&quot; :rules=&quot;rules&quot; label-width=&quot;6rem&quot; :status-icon=&quot;true&quot; :label-position=&quot;labelPosition&quot;&gt;&#10;    $END$&#10;&lt;/el-form&gt;" description="ElementUI Form表单" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="CSS" value="false" />
+      <option name="CUCUMBER_FEATURE_FILE" value="false" />
+      <option name="CoffeeScript" value="false" />
+      <option name="DART" value="false" />
+      <option name="ECMAScript6" value="false" />
+      <option name="HAML" value="false" />
+      <option name="Handlebars" value="false" />
+      <option name="JADE" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="JSON" value="false" />
+      <option name="JSP" value="false" />
+      <option name="OTHER" value="true" />
+      <option name="REQUEST" value="false" />
+      <option name="TypeScript" value="false" />
+      <option name="XML" value="false" />
+    </context>
+  </template>
 </templateSet>
