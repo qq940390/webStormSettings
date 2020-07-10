@@ -1,0 +1,21 @@
+<templateSet group="element">
+  <template name="elform" value="&lt;el-form ref=&quot;postForm&quot; :model=&quot;postForm&quot; :rules=&quot;rules&quot; label-width=&quot;6rem&quot; :status-icon=&quot;true&quot; :label-position=&quot;labelPosition&quot;&gt;&#10;    $END$&#10;&lt;/el-form&gt;" description="ElementUI Form表单" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="CSS" value="false" />
+      <option name="CUCUMBER_FEATURE_FILE" value="false" />
+      <option name="CoffeeScript" value="false" />
+      <option name="DART" value="false" />
+      <option name="ECMAScript6" value="false" />
+      <option name="HAML" value="false" />
+      <option name="Handlebars" value="false" />
+      <option name="JADE" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="JSON" value="false" />
+      <option name="JSP" value="false" />
+      <option name="OTHER" value="true" />
+      <option name="REQUEST" value="false" />
+      <option name="TypeScript" value="false" />
+      <option name="XML" value="false" />
+    </context>
+  </template>
+</templateSet>
