@@ -4,7 +4,7 @@
       <option name="Vue" value="true" />
     </context>
   </template>
-  <template name="elvloaddata" value="load$END$({ id: this.id })&#10;    .then(response =&gt; {&#10;        if (!(response.data instanceof Object)) return&#10;        if (response.data[&quot;_rsc_value&quot;]) {&#10;            this.postForm._rsc_value = response.data._rsc_value&#10;            return&#10;        }&#10;        this.postForm = response.data&#10;    })&#10;    .catch(err =&gt; {})" description="添加或修改内容时的防止重复提交功能" toReformat="true" toShortenFQNames="true">
+  <template name="elvloaddata" value="load$END$({ id: this.id })&#10;    .then(response =&gt; {&#10;        if (!(response.data instanceof Object)) return&#10;        this.postForm = response.data&#10;    })&#10;    .catch(err =&gt; {})" description="添加或修改内容时的防止重复提交功能" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="Vue" value="true" />
     </context>
