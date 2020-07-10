@@ -1,0 +1,42 @@
+<templateSet group="ElementVUE">
+  <template name="elvalidfunc" value="const valid$END$ = (rule, value, callback) =&gt; {&#10;    if (!value) {&#10;        callback(new Error(&quot;附加参数格式不正确&quot;))&#10;    }&#10;    callback()&#10;}" description="ElementUI 表单自定义验证函数" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Vue" value="true" />
+    </context>
+  </template>
+  <template name="elvloaddata" value="load$END$({ id: this.id })&#10;    .then(response =&gt; {&#10;        if (!(response.data instanceof Object)) return&#10;        if (response.data[&quot;_rsc_value&quot;]) {&#10;            this.postForm._rsc_value = response.data._rsc_value&#10;            return&#10;        }&#10;        this.postForm = response.data&#10;    })&#10;    .catch(err =&gt; {})" description="添加或修改内容时的防止重复提交功能" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="Vue" value="true" />
+    </context>
+  </template>
+  <template name="elvpage" value="&lt;div class=&quot;page-wrap&quot;&gt;&#10;    &lt;el-pagination&#10;        background&#10;        layout=&quot;sizes, prev, pager, next, jumper, -&gt;, total&quot;&#10;        prev-text=&quot;上一页&quot;&#10;        next-text=&quot;下一页&quot;&#10;        :total=&quot;total&quot;&#10;        :page-size=&quot;size&quot;&#10;        @size-change=&quot;onSizeChange&quot;&#10;        @current-change=&quot;onPageChange&quot;&#10;        @prev-click=&quot;onPrevClick&quot;&#10;        @next-click=&quot;onNextClick&quot;&#10;    &gt;&#10;    &lt;/el-pagination&gt;&#10;&lt;/div&gt;" description="ElementUI的分页代码" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Vue" value="true" />
+    </context>
+  </template>
+  <template name="elvpagefunc" value="onPageChange(page) {&#10;    this.page = page&#10;},&#10;onSizeChange(size) {&#10;    this.size = size&#10;},&#10;onPrevClick(page) {&#10;    this.page = page&#10;},&#10;onNextClick(page) {&#10;    this.page = page&#10;}" description="ElementUI的分页代码回调函数" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Vue" value="true" />
+    </context>
+  </template>
+  <template name="elvpagewatch" value="watch: {&#10;    page(newValue, oldValue) {&#10;        this.initData(newValue, this.size)&#10;    },&#10;    size(newValue, oldValue) {&#10;        this.initData(this.page, newValue)&#10;    }&#10;}" description="ElementUI的分页Watch" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Vue" value="true" />
+    </context>
+  </template>
+  <template name="elvinitdata" value="initData(_page, _size) {&#10;    if (typeof _size == &quot;undefined&quot;) _size = this.size&#10;    loadAllUser({ page: _page, size: _size }).then(response =&gt; {&#10;        this.total = parseInt(response.data.total)&#10;        this.tableData = response.data.data&#10;    })&#10;}," description="用于ElementUI的Table数据" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Vue" value="true" />
+    </context>
+  </template>
+  <template name="elvdata" value="data() {&#10;    return {&#10;        filterForm: {&#10;            description: &quot;&quot;,&#10;            name: &quot;&quot;&#10;        },&#10;        size: 10,&#10;        page: 1,&#10;        total: 0,&#10;        tableData: []&#10;    }&#10;}," description="用于快速生成 data()" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Vue" value="true" />
+    </context>
+  </template>
+  <template name="elvdeletefunc" value="onDelete(index, row) {&#10;    this.$confirm(&quot;确定要删除吗?&quot;, &quot;提示&quot;, {&#10;        confirmButtonText: &quot;确定&quot;,&#10;        cancelButtonText: &quot;取消&quot;,&#10;        type: &quot;warning&quot;&#10;    })&#10;        .then(() =&gt; {&#10;            delete$END$({&#10;                id: row.uid&#10;            })&#10;                .then(res =&gt; {&#10;                    this.tableData = removeFromTreeTable(&#10;                        this.tableData,&#10;                        row.uid,&#10;                        &quot;uid&quot;&#10;                    )&#10;                })&#10;                .catch(err =&gt; {})&#10;        })&#10;        .catch(() =&gt; {})&#10;}," description="用于ElementUI的table数据页删除method" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Vue" value="true" />
+    </context>
+  </template>
+</templateSet>
