@@ -1,0 +1,7 @@
+<templateSet group="Vue">
+  <template name="vmounted" value="mounted() {&#10;    $END$&#10;}," description="Vue component mounted" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="VUE_COMPONENT_DESCRIPTOR" value="true" />
+    </context>
+  </template>
+</templateSet>
