@@ -4,7 +4,7 @@
       <option name="Vue" value="true" />
     </context>
   </template>
-  <template name="elvloaddata" value="load$END$({ id: this.id })&#10;    .then(response =&gt; {&#10;        if (!(response.data instanceof Object)) return&#10;        this.postForm = response.data&#10;    })&#10;    .catch(err =&gt; {})" description="添加或修改内容时的防止重复提交功能" toReformat="true" toShortenFQNames="true">
+  <template name="elvloaddata" value="load$END$({ id: this.id })&#10;    .then(res =&gt; {&#10;        if (!(res.data instanceof Object)) return&#10;        this.postForm = res.data&#10;    })&#10;    .catch(err =&gt; {})" description="添加或修改内容时的防止重复提交功能" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="Vue" value="true" />
     </context>
@@ -24,7 +24,7 @@
       <option name="Vue" value="true" />
     </context>
   </template>
-  <template name="elvinitdata" value="initData(_page, _size) {&#10;    if (typeof _size == &quot;undefined&quot;) _size = this.size&#10;    loadAllUser({ page: _page, size: _size }).then(response =&gt; {&#10;        this.total = parseInt(response.data.total)&#10;        this.tableData = response.data.data&#10;    })&#10;}," description="用于ElementUI的Table数据" toReformat="false" toShortenFQNames="true">
+  <template name="elvinitdata" value="initData(_page, _size) {&#10;    if (typeof _size == &quot;undefined&quot;) _size = this.size&#10;    loadAllUser({ page: _page, size: _size }).then(res =&gt; {&#10;        this.total = parseInt(res.data.total)&#10;        this.tableData = res.data.data&#10;    })&#10;}," description="用于ElementUI的Table数据" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Vue" value="true" />
     </context>
@@ -34,7 +34,7 @@
       <option name="Vue" value="true" />
     </context>
   </template>
-  <template name="elvdeletefunc" value="onDelete(index, row) {&#10;    this.$confirm(&quot;确定要删除吗?&quot;, &quot;提示&quot;, {&#10;        confirmButtonText: &quot;确定&quot;,&#10;        cancelButtonText: &quot;取消&quot;,&#10;        type: &quot;warning&quot;&#10;    })&#10;        .then(() =&gt; {&#10;            delete$END$({&#10;                id: row.uid&#10;            })&#10;                .then(res =&gt; {&#10;                    this.tableData = removeFromTreeTable(&#10;                        this.tableData,&#10;                        row.uid,&#10;                        &quot;uid&quot;&#10;                    )&#10;                })&#10;                .catch(err =&gt; {})&#10;        })&#10;        .catch(() =&gt; {})&#10;}," description="用于ElementUI的table数据页删除method" toReformat="false" toShortenFQNames="true">
+  <template name="elvdeletefunc" value="onDelete(index, row) {&#10;    this.$confirm(&quot;确定要删除吗?&quot;, &quot;提示&quot;, {&#10;        confirmButtonText: &quot;确定&quot;,&#10;        cancelButtonText: &quot;取消&quot;,&#10;        type: &quot;warning&quot;&#10;    })&#10;        .then(() =&gt; {&#10;            delete$END$({&#10;                id: row.uid&#10;            })&#10;                .then(res =&gt; {&#10;                    this.tableData.splice(index, 1)&#10;                })&#10;                .catch(err =&gt; {})&#10;        })&#10;        .catch(() =&gt; {})&#10;}," description="用于ElementUI的table数据页删除method" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Vue" value="true" />
     </context>
