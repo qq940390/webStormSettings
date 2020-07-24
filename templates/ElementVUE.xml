@@ -59,4 +59,10 @@
       <option name="XML" value="false" />
     </context>
   </template>
+  <template name="elvswitch" value="&lt;el-switch&#10;    v-model=&quot;postForm.data_unsigned&quot;&#10;    class=&quot;iPhoneSwitch&quot;&#10;    :active-value=&quot;1&quot;&#10;    :inactive-value=&quot;0&quot;&#10;    inactive-text=&quot;否&quot;&#10;    active-text=&quot;是&quot;&#10;&gt;&#10;&lt;/el-switch&gt;" description="ElementUI Switch组件" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="HTML" value="true" />
+      <option name="Vue" value="true" />
+    </context>
+  </template>
 </templateSet>
