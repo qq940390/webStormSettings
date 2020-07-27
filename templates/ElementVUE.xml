@@ -34,7 +34,7 @@
       <option name="Vue" value="true" />
     </context>
   </template>
-  <template name="elvdeletefunc" value="onDelete(index, row) {&#10;    this.$confirm(&quot;确定要删除吗?&quot;, &quot;提示&quot;, {&#10;        confirmButtonText: &quot;确定&quot;,&#10;        cancelButtonText: &quot;取消&quot;,&#10;        type: &quot;warning&quot;&#10;    })&#10;        .then(() =&gt; {&#10;            delete$END$({&#10;                id: row.uid&#10;            })&#10;                .then(res =&gt; {&#10;                    this.tableData.splice(index, 1)&#10;                })&#10;                .catch(err =&gt; {})&#10;        })&#10;        .catch(() =&gt; {})&#10;}," description="用于ElementUI的table数据页删除method" toReformat="false" toShortenFQNames="true">
+  <template name="elvdeletefunc" value="onDelete(index, row) {&#10;    this.deleteConfirm(() =&gt; {&#10;        delete$END$({&#10;            id: row.uid&#10;        })&#10;            .then(res =&gt; {&#10;                this.tableData.splice(index, 1)&#10;            })&#10;            .catch(err =&gt; {})&#10;    })&#10;    .catch(() =&gt; {})&#10;}," description="用于ElementUI的table数据页删除method" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="Vue" value="true" />
     </context>
