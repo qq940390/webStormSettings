@@ -65,4 +65,23 @@
       <option name="Vue" value="true" />
     </context>
   </template>
+  <template name="elvselector" value="&lt;el-select v-model=&quot;postForm.show_format_type&quot; placeholder=&quot;请选择展示格式类型&quot;&gt;&#10;    &lt;el-option&#10;        v-for=&quot;(item, i) in formatTypeOption&quot;&#10;        :key=&quot;item.value&quot;&#10;        :label=&quot;item.label&quot;&#10;        :value=&quot;item.value&quot;&#10;    &gt;&#10;    &lt;/el-option&gt;&#10;&lt;/el-select&gt;" description="ElementUI 下拉框选项组件" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="CSS" value="false" />
+      <option name="CUCUMBER_FEATURE_FILE" value="false" />
+      <option name="CoffeeScript" value="false" />
+      <option name="DART" value="false" />
+      <option name="ECMAScript6" value="false" />
+      <option name="HAML" value="false" />
+      <option name="Handlebars" value="false" />
+      <option name="JADE" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="JSON" value="false" />
+      <option name="JSP" value="false" />
+      <option name="OTHER" value="true" />
+      <option name="REQUEST" value="false" />
+      <option name="TypeScript" value="false" />
+      <option name="XML" value="false" />
+    </context>
+  </template>
 </templateSet>
