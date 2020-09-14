@@ -4,22 +4,7 @@
       <option name="Vue" value="true" />
     </context>
   </template>
-  <template name="elvloaddata" value="load$END$({ id: this.id })&#10;    .then(res =&gt; {&#10;        if (!(res.data instanceof Object)) return&#10;        this.postForm = res.data&#10;    })&#10;    .catch(err =&gt; {})" description="添加或修改内容时的防止重复提交功能" toReformat="true" toShortenFQNames="true">
-    <context>
-      <option name="Vue" value="true" />
-    </context>
-  </template>
-  <template name="elvpage" value="&lt;div class=&quot;page-wrap&quot;&gt;&#10;    &lt;el-pagination&#10;        background&#10;        layout=&quot;sizes, prev, pager, next, jumper, -&gt;, total&quot;&#10;        prev-text=&quot;上一页&quot;&#10;        next-text=&quot;下一页&quot;&#10;        :total=&quot;total&quot;&#10;        :page-size=&quot;size&quot;&#10;        @size-change=&quot;onSizeChange&quot;&#10;        @current-change=&quot;onPageChange&quot;&#10;        @prev-click=&quot;onPrevClick&quot;&#10;        @next-click=&quot;onNextClick&quot;&#10;    &gt;&#10;    &lt;/el-pagination&gt;&#10;&lt;/div&gt;" description="ElementUI的分页代码" toReformat="false" toShortenFQNames="true">
-    <context>
-      <option name="Vue" value="true" />
-    </context>
-  </template>
-  <template name="elvpagefunc" value="onPageChange(page) {&#10;    this.page = page&#10;},&#10;onSizeChange(size) {&#10;    this.size = size&#10;},&#10;onPrevClick(page) {&#10;    this.page = page&#10;},&#10;onNextClick(page) {&#10;    this.page = page&#10;}" description="ElementUI的分页代码回调函数" toReformat="false" toShortenFQNames="true">
-    <context>
-      <option name="Vue" value="true" />
-    </context>
-  </template>
-  <template name="elvpagewatch" value="watch: {&#10;    page(newValue, oldValue) {&#10;        this.initData(newValue, this.size)&#10;    },&#10;    size(newValue, oldValue) {&#10;        this.initData(this.page, newValue)&#10;    }&#10;}" description="ElementUI的分页Watch" toReformat="false" toShortenFQNames="true">
+  <template name="elvpage" value="&lt;pagination :total=&quot;total&quot; :page=&quot;page&quot; :limit=&quot;limit&quot; @pagination=&quot;onPaginationChange&quot; /&gt;" description="ElementUI的分页代码" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Vue" value="true" />
     </context>
