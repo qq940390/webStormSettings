@@ -69,4 +69,9 @@
       <option name="XML" value="false" />
     </context>
   </template>
+  <template name="elvrowhalf" value="&lt;el-row&gt;&#10;    &lt;el-col :span=&quot;12&quot;&gt;&#10;        &#10;    &lt;/el-col&gt;&#10;    &lt;el-col :span=&quot;12&quot;&gt;&#10;        &#10;    &lt;/el-col&gt;&#10;&lt;/el-row&gt;" description="用于ElementUI的row" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Vue" value="true" />
+    </context>
+  </template>
 </templateSet>
