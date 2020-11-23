@@ -1,6 +1,9 @@
 <application>
   <component name="ExportableFileTemplateSettings">
     <default_templates>
+      <template name="VueElementAddTpl.vue" reformat="true" live-template-enabled="true" />
+      <template name="VueElementEditTpl.vue" reformat="true" live-template-enabled="true" />
+      <template name="VueElementFormTpl.vue" reformat="true" live-template-enabled="true" />
       <template name="XSLT Stylesheet.xsl" reformat="true" live-template-enabled="true" enabled="true" />
     </default_templates>
     <internal_templates>
