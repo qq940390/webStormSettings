@@ -1,0 +1,12 @@
+<templateSet group="JavaScript">
+  <template name="impreq" value="import request from &quot;@/core/request&quot;" description="import request from &quot;@/core/request&quot;" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="expreqfunc" value="export function $END$(method, params = {}, data = {}) {&#10;    return request({&#10;        url: &quot;/member/manage/add&quot;,&#10;        method,&#10;        params,&#10;        data&#10;    })&#10;}" description="导出Request请求异步函数" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+</templateSet>

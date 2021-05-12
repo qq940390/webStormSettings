@@ -1,0 +1,83 @@
+<templateSet group="user">
+  <template name="elv-table-column-enabled" value="&lt;el-table-column&#10;                    label=&quot;是否启用&quot;&#10;                    prop=&quot;enabled&quot;&#10;                    align=&quot;center&quot;&#10;                    width=&quot;110&quot;&#10;                    :sortable=&quot;getSortable('enabled')&quot;&#10;                &gt;&#10;                    &lt;template slot-scope=&quot;scope&quot;&gt;&#10;                        &lt;enabled-tag :enabled=&quot;scope.row.enabled&quot; enabled-text=&quot;是&quot; disabled-text=&quot;否&quot;&gt;&lt;/enabled-tag&gt;&#10;                    &lt;/template&gt;&#10;                &lt;/el-table-column&gt;" description="table-column enabled 是否启用" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="VUE_TEMPLATE" value="true" />
+    </context>
+  </template>
+  <template name="elvalidfunc" value="const valid$END$ = (rule, value, callback) =&gt; {&#10;    if (!value) {&#10;        callback(new Error(&quot;附加参数格式不正确&quot;))&#10;    }&#10;    callback()&#10;}" description="ElementUI 表单自定义验证函数" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Vue" value="true" />
+    </context>
+  </template>
+  <template name="elvdata" value="data() {&#10;    return {&#10;        filterForm: {&#10;            description: &quot;&quot;,&#10;            name: &quot;&quot;&#10;        },&#10;        size: 10,&#10;        page: 1,&#10;        total: 0,&#10;        tableData: []&#10;    }&#10;}," description="用于快速生成 data()" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Vue" value="true" />
+    </context>
+  </template>
+  <template name="elvdeletefunc" value="onDelete(index, row) {&#10;    this.deleteConfirm(() =&gt; {&#10;        delete$END$({&#10;            id: row.uid&#10;        })&#10;            .then(res =&gt; {&#10;                this.tableData.splice(index, 1)&#10;            })&#10;            .catch(err =&gt; {})&#10;    })&#10;    .catch(() =&gt; {})&#10;}," description="用于ElementUI的table数据页删除method" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="Vue" value="true" />
+    </context>
+  </template>
+  <template name="elvfilterform" value="&lt;div class=&quot;the-filter-form&quot;&gt;&#10;    &lt;el-form :inline=&quot;true&quot; :model=&quot;filterForm&quot; ref=&quot;filterForm&quot;&gt;&#10;        &lt;el-form-item label=&quot;管理员帐号&quot; prop=&quot;username&quot;&gt;&#10;            &lt;el-input v-model=&quot;filterForm.username&quot;&gt;&lt;/el-input&gt;&#10;        &lt;/el-form-item&gt;&#10;&#10;        &lt;el-form-item label=&quot;真实姓名&quot; prop=&quot;realname&quot;&gt;&#10;            &lt;el-input v-model=&quot;filterForm.realname&quot;&gt;&lt;/el-input&gt;&#10;        &lt;/el-form-item&gt;&#10;&#10;        &lt;el-form-item label=&quot;昵称&quot; prop=&quot;nickname&quot;&gt;&#10;            &lt;el-input v-model=&quot;filterForm.nickname&quot;&gt;&lt;/el-input&gt;&#10;        &lt;/el-form-item&gt;&#10;&#10;        &lt;el-form-item&gt;&#10;            &lt;el-button type=&quot;primary&quot; @click=&quot;onFilterSubmit&quot;&#10;                &gt;检索&lt;/el-button&#10;            &gt;&#10;        &lt;/el-form-item&gt;&#10;&#10;        &lt;el-form-item&gt;&#10;            &lt;el-button @click=&quot;onFilterReset&quot;&gt;重置&lt;/el-button&gt;&#10;        &lt;/el-form-item&gt;&#10;    &lt;/el-form&gt;&#10;&lt;/div&gt;" description="列表页检索过滤表单" toReformat="true" toShortenFQNames="true" />
+  <template name="elvform" value="&lt;el-form ref=&quot;postForm&quot; :model=&quot;postForm&quot; :rules=&quot;rules&quot; label-width=&quot;6rem&quot; :status-icon=&quot;true&quot; :label-position=&quot;labelPosition&quot;&gt;&#10;    $END$&#10;&lt;/el-form&gt;" description="ElementUI Form表单" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="CSS" value="false" />
+      <option name="CUCUMBER_FEATURE_FILE" value="false" />
+      <option name="CoffeeScript" value="false" />
+      <option name="DART" value="false" />
+      <option name="ECMAScript6" value="false" />
+      <option name="HAML" value="false" />
+      <option name="Handlebars" value="false" />
+      <option name="JADE" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="JSON" value="false" />
+      <option name="JSP" value="false" />
+      <option name="OTHER" value="true" />
+      <option name="REQUEST" value="false" />
+      <option name="TypeScript" value="false" />
+      <option name="XML" value="false" />
+    </context>
+  </template>
+  <template name="elvinitdata" value="initData(_page, _size) {&#10;    if (typeof _size == &quot;undefined&quot;) _size = this.size&#10;    loadAllUser({ page: _page, size: _size }).then(res =&gt; {&#10;        this.total = parseInt(res.data.total)&#10;        this.tableData = res.data.data&#10;    })&#10;}," description="用于ElementUI的Table数据" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Vue" value="true" />
+    </context>
+  </template>
+  <template name="elvpage" value="&lt;pagination :total=&quot;total&quot; :page=&quot;page&quot; :limit=&quot;limit&quot; @pagination=&quot;onPaginationChange&quot; /&gt;" description="ElementUI的分页代码" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Vue" value="true" />
+    </context>
+  </template>
+  <template name="elvrowhalf" value="&lt;el-row&gt;&#10;    &lt;el-col :span=&quot;12&quot;&gt;&#10;        &#10;    &lt;/el-col&gt;&#10;    &lt;el-col :span=&quot;12&quot;&gt;&#10;        &#10;    &lt;/el-col&gt;&#10;&lt;/el-row&gt;" description="用于ElementUI的row" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Vue" value="true" />
+    </context>
+  </template>
+  <template name="elvselector" value="&lt;el-select v-model=&quot;postForm.show_format_type&quot; placeholder=&quot;请选择展示格式类型&quot;&gt;&#10;    &lt;el-option&#10;        v-for=&quot;(item, i) in formatTypeOption&quot;&#10;        :key=&quot;item.value&quot;&#10;        :label=&quot;item.label&quot;&#10;        :value=&quot;item.value&quot;&#10;    &gt;&#10;    &lt;/el-option&gt;&#10;&lt;/el-select&gt;" description="ElementUI 下拉框选项组件" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="CSS" value="false" />
+      <option name="CUCUMBER_FEATURE_FILE" value="false" />
+      <option name="CoffeeScript" value="false" />
+      <option name="DART" value="false" />
+      <option name="ECMAScript6" value="false" />
+      <option name="HAML" value="false" />
+      <option name="Handlebars" value="false" />
+      <option name="JADE" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="JSON" value="false" />
+      <option name="JSP" value="false" />
+      <option name="OTHER" value="true" />
+      <option name="REQUEST" value="false" />
+      <option name="TypeScript" value="false" />
+      <option name="XML" value="false" />
+    </context>
+  </template>
+  <template name="elvswitch" value="&lt;el-switch&#10;    v-model=&quot;postForm.data_unsigned&quot;&#10;    class=&quot;iPhoneSwitch&quot;&#10;    :active-value=&quot;1&quot;&#10;    :inactive-value=&quot;0&quot;&#10;    inactive-text=&quot;否&quot;&#10;    active-text=&quot;是&quot;&#10;&gt;&#10;&lt;/el-switch&gt;" description="ElementUI Switch组件" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="HTML" value="true" />
+      <option name="Vue" value="true" />
+    </context>
+  </template>
+</templateSet>
